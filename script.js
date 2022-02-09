@@ -15303,6 +15303,10 @@ const dayOffset = msOffset / 1000 / 60 / 60 / 24
 // console.log(dayOffset);
 // To check which word is today
 const targetWord = targetWords[Math.floor(dayOffset)]
+const victory = new Audio('music/VICTORY SOUND EFFECT.mp3');
+const click = new Audio('music/click.mp3');
+const back = new Audio('music/back.mp3');
+const enter = new Audio('music/enter.mp3')
 
 startInteraction()
 
@@ -15335,16 +15339,19 @@ function handleMouseClick(e) {
 
 function handleKeyPress(e) {
   if (e.key === "Enter") {
+    enter.play();
     submitGuess()
     return
   }
 
   if (e.key === "Backspace" || e.key === "Delete") {
+    back.play();
     deleteKey()
     return
   }
 
   if (e.key.match(/^[a-z]$/)) {
+    click.play()
     pressKey(e.key)
     return
   }
@@ -15463,6 +15470,7 @@ function checkWinLose(guess, tiles) {
   if (guess === targetWord) {
     showAlert("You Win", 5000)
     danceTiles(tiles)
+    victory.play();
     stopInteraction()
     return
   }

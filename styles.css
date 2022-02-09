@@ -20,6 +20,7 @@ body {
   font-size: larger;
 }
 
+
 .keyboard {
   display: grid;
   grid-template-columns: repeat(20, minmax(auto, 1.25em));
@@ -236,6 +237,7 @@ footer{
   justify-content: center;
   align-items: center;
   opacity: 0;
+  overflow: hidden;
 }
 
 .login-form-container.active{
@@ -283,7 +285,7 @@ footer{
 
 .btn{
   float: right;
-  margin-top: .1rem;
+  /* margin-top: .1rem; */
   padding: .5rem .5rem;
   color: white;
   cursor: pointer;
@@ -311,7 +313,6 @@ footer{
 .info{
   font-size: 1rem;
   line-height: 2.6;
-  /* text-align: center; */
 }
 
 .row{
@@ -340,7 +341,9 @@ footer{
   background-color: hsl(115, 46%, 59%);
   padding: 5px;
   color: white;
+  animation: dance 1s ease-in-out infinite;
 }
+
 .e{
   border: 2px solid black;
    padding: 5px;
@@ -374,6 +377,7 @@ h6{
    padding-left: 12px;
    color: white;
    background-color: hsl(49, 51%, 47%);
+   animation: dance 1s ease-in-out infinite;
 }
 .l{
   border: 2px solid black;
@@ -395,8 +399,9 @@ h6{
 .u{
   border: 2px solid black;
   color: white;
-   padding: 5px;
-   background-color: hsl(240, 2%, 23%);
+  padding: 5px;
+  background-color: hsl(240, 2%, 23%);
+  animation: dance 1s ease-in-out infinite;
 }
 .e{
   border: 2px solid black;
@@ -405,14 +410,12 @@ h6{
 /* Login Form Ends */
 
 
-
 /* Responsiveness */
 
 @media(max-width: 768px){
   .info{
-    font-size: 0.5rem;
-    line-height: 1.6;
-    text-align: center;
+    font-size: .8rem;
+    line-height: 2.6;
   }
   .example{
     width: 100%;
@@ -430,5 +433,12 @@ h6{
   }
   .login-form-container #close-login-form{
     font-size: 2.3rem;
+  }
+}
+
+@media(max-width: 480px){
+  .info{
+    font-size: .4rem;
+    line-height: 1.8;
   }
 }
