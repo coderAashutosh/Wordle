@@ -310,6 +310,10 @@ footer{
   text-transform: capitalize;
 }
 
+h6{
+  font-size: 0.8rem;
+}
+
 .info{
   font-size: 1rem;
   line-height: 2.6;
@@ -438,7 +442,13 @@ h6{
 
 @media(max-width: 480px){
   .info{
-    font-size: .4rem;
+    font-size: .8rem;
     line-height: 1.8;
+  }
+  h6{
+    font-size: 0.8rem;
+  }
+  .examples{
+    font-size: 1rem;
   }
 }
